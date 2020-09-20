@@ -19,11 +19,23 @@ public class Main
     private static int addArguments(String[] args) 
     {
     	int total = 0;
-
-    	for(int i = 0; i < args.length; i++)
-        {
-        	total = total + Integer.valueOf(args[i]);
-        }
+    	
+    	if(args[0].contains("-"))
+    	{
+    		for(int i = 1; i < args.length; i++)
+        	{
+        		total = total + Integer.valueOf(args[i]);
+        	}
+    		
+    		total = (total * -1);
+    	}
+    	else
+    	{
+    		for(int i = 0; i < args.length; i++)
+        	{
+        		total = total + Integer.valueOf(args[i]);
+        	}
+    	}
         
     	return total;
     }
