@@ -13,7 +13,7 @@ public class Main
         catch (Exception e) 
         {
             System.err.println("Please provide two integers to add");
-        }
+        } 
     }
 
     private static int addArguments(String[] args) 
