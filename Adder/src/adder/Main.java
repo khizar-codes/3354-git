@@ -12,7 +12,15 @@ public class Main
         } 
         catch (Exception e) 
         {
-            System.err.println("Please provide at least two integers to add");
+        	if (!args[0].matches("^[0-9]+$"))
+        	{
+        		System.err.println("Invalid Character");
+        	}
+        	else
+        	{
+        		System.err.println("Not enough arguments");
+        	}
+        
         }
     }
 
